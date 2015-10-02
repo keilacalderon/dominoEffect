@@ -10,7 +10,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, and Greenfoot)
  * image.
  * 
  * @author keila@email.uscb.edu
- * @version csci145_hw2_ex1
+ * @version csci145_hw2_ex2
  */
 
 public class Crab extends Actor
@@ -25,11 +25,6 @@ public class Crab extends Actor
      */
     public Crab()
     {
-     /*
-     * Instatiate the GreenfootImage objects
-     * Initalize frameCount and wormsEaten to zero, 
-     * and store them in our instance vairables
-     */
         image1 = new GreenfootImage("crab.png");
         image2 = new GreenfootImage("crab2.png");
         setImage(image1);
@@ -43,11 +38,8 @@ public class Crab extends Actor
      */
     public void act()
     {
-        /*
-         * Methods 
-         */
         checkKeypress();
-        move(5);
+        // move(5); commented method out in order to full ex2
         lookForWorm();
         switchImage();
         frameCount++;
@@ -57,9 +49,6 @@ public class Crab extends Actor
      * Alternate the crab's image between image1 and image2.
      */
     public void switchImage()
-    /*
-     * 
-     */
     {
         if (frameCount == 5)
         {
@@ -80,10 +69,12 @@ public class Crab extends Actor
      * If it has, react accordingly.
      */
     public void checkKeypress()
-    /*
-     * 
-     */
     {
+        /*
+         * A new if statement has been added in checkKeyPress
+         * in order to make the crab move only when the up-arrow 
+         * is being pressed, rather than moving forward automatically. 
+         */
         if (Greenfoot.isKeyDown("left")) 
         {
             turn(-4);
@@ -91,6 +82,10 @@ public class Crab extends Actor
         if (Greenfoot.isKeyDown("right")) 
         {
             turn(4);
+        } // end if
+        if (Greenfoot.isKeyDown("up"))
+        {
+            move(5);
         } // end if
     } // end method checkKey
 
@@ -100,9 +95,6 @@ public class Crab extends Actor
      * eaten eight worms, we win.
      */
     public void lookForWorm()
-    /*
-     * 
-     */
     {
         if ( isTouching(Worm.class) ) 
         {
