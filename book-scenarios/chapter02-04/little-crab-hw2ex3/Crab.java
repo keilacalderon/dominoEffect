@@ -26,6 +26,11 @@ public class Crab extends Actor
      */
     public Crab()
     {
+        /*
+         * Instatiate the GreenfootImage objects
+         * Initalize frameCount and wormsEaten to zero, 
+         * and store them in our instance vairables
+         */
         image1 = new GreenfootImage("crab.png");
         image2 = new GreenfootImage("crab2.png");
         setImage(image1);
@@ -40,13 +45,17 @@ public class Crab extends Actor
      */
     public void act()
     {
+        /*
+         * Call methods that will allow crab to alternate image when
+         * the crab moves and change on on the cycle we assign it.
+         */
         checkKeypress();
         // move(5); commented method out in order to full ex2
         lookForWorm();
         switchImage();
         frameCount++;
         checkFlipAround(); // added in order to preform task specified in 
-                          // checkFlipAround method 
+        // checkFlipAround method 
     } // end method act
 
     /**
@@ -54,6 +63,10 @@ public class Crab extends Actor
      */
     public void switchImage()
     {
+        /*
+         * Created method that will allow the crab's image to change when it moves
+         * Added a frame count to allow it to change on the cycle we assign it
+         */
         if (frameCount == 5)
         {
             if (getImage() == image1) 
@@ -67,7 +80,7 @@ public class Crab extends Actor
             frameCount = 0; 
         } // end outer if 
     } // end method switchImage
-    
+
     /**
      * Check whether a control key on the keyboard has been pressed.
      * If it has, react accordingly.
@@ -75,6 +88,9 @@ public class Crab extends Actor
     public void checkKeypress()
     {
         /*
+         * Method created to allow the player to have more control of the 
+         * game by allowing the prayer to use the arrow keys.
+
          * A new if statement has been added in checkKeyPress
          * in order to make the crab move only when the up-arrow 
          * is being pressed, rather than moving forward automatically. 
@@ -92,7 +108,7 @@ public class Crab extends Actor
             move(5);
         } // end if
     } // end method checkKey
-    
+
     /**
      * Check to see if the down-arrow key is being pressed
      */
@@ -118,7 +134,7 @@ public class Crab extends Actor
             currentFlipAngle = 0;
         } // end if 
     } // end method checkFlipAround 
-    
+
     /**
      * Check whether we have stumbled upon a worm.
      * If we have, eat it. If not, do nothing. If we have
@@ -126,6 +142,11 @@ public class Crab extends Actor
      */
     public void lookForWorm()
     {
+        /*Method will allow the crab to eat the worm once it has touched it.
+         * A sound has been added inside the if statement.
+         * Once the crab has eaten 8 worms, a different sound will be played
+         * allowing the player know it has "won" the game.
+         */
         if ( isTouching(Worm.class) ) 
         {
             removeTouching(Worm.class);

@@ -44,7 +44,8 @@ public class Crab extends Actor
     public void act()
     {
         /*
-         * Methods 
+         * Call methods that will allow crab to alternate image when
+         * the crab moves and change on on the cycle we assign it.
          */
         checkKeypress();
         move(5);
@@ -57,10 +58,11 @@ public class Crab extends Actor
      * Alternate the crab's image between image1 and image2.
      */
     public void switchImage()
-    /*
-     * 
-     */
     {
+        /*
+         * Created method that will allow the crab's image to change when it moves
+         * Added a frame count to allow it to change on the cycle we assign it
+         */
         if (frameCount == 5)
         {
             if (getImage() == image1) 
@@ -80,10 +82,11 @@ public class Crab extends Actor
      * If it has, react accordingly.
      */
     public void checkKeypress()
-    /*
-     * 
-     */
     {
+        /*
+         * Method created to allow the player to have more control of the 
+         * game by allowing the prayer to use the arrow keys.
+         */
         if (Greenfoot.isKeyDown("left")) 
         {
             turn(-4);
@@ -100,10 +103,13 @@ public class Crab extends Actor
      * eaten eight worms, we win.
      */
     public void lookForWorm()
-    /*
-     * 
-     */
     {
+        /*
+         * Method will allow the crab to eat the worm once it has touched it.
+         * A sound has been added inside the if statement.
+         * Once the crab has eaten 8 worms, a different sound will be played
+         * allowing the player know it has "won" the game.
+         */
         if ( isTouching(Worm.class) ) 
         {
             removeTouching(Worm.class);
