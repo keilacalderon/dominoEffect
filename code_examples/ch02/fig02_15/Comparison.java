@@ -1,4 +1,4 @@
-// Fig. 2.15: Comparison.java
+ // Fig. 2.15: Comparison.java
 // Compare integers using if statements, relational operators 
 // and equality operators.
 import java.util.Scanner; // program uses class Scanner
@@ -21,22 +21,29 @@ public class Comparison
       number2 = input.nextInt(); // read second number from user 
       
       if (number1 == number2) 
-         System.out.printf("%d == %d%n", number1, number2);
+      {
+         // %d if the format specifier for a decimal integer 
+         // the first % is placeholder for the value 
+         // contained in value number1
+         // The second %d is a placeholder for the value
+         // contained in value number2
+         System.out.printf("%d == %d\n", number1, number2);
+      } // end if
 
       if (number1 != number2)
-         System.out.printf("%d != %d%n", number1, number2);
+         System.out.printf("%d != %d\n", number1, number2);
 
       if (number1 < number2)
-         System.out.printf("%d < %d%n", number1, number2);
+         System.out.printf("%d < %d\n", number1, number2);
 
       if (number1 > number2)
-         System.out.printf("%d > %d%n", number1, number2);
+         System.out.printf("%d > %d\n", number1, number2);
 
       if (number1 <= number2)
-         System.out.printf("%d <= %d%n", number1, number2);
+         System.out.printf("%d <= %d\n", number1, number2);
 
       if (number1 >= number2)
-         System.out.printf("%d >= %d%n", number1, number2);
+         System.out.printf("%d >= %d\n", number1, number2);
    } // end method main
 } // end class Comparison
 
