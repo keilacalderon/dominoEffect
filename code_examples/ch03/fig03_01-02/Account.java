@@ -4,19 +4,41 @@
 
 public class Account
 {
-   private String name; // instance variable
- 
-   // method to set the name in the object              
-   public void setName(String name)      
-   {                                             
-      this.name = name; // store the name
-   }         
+   /* FIELD(S)*/
+   private String name; // PRIVATE instance variable
 
-   // method to retrieve the name from the object
+   /* CONTRUCTUCTOR(S)*/
+   // no explicitly-defined constructor, so Java will
+   // prepare a "default constructor" for ys. This default
+   //constructor has no arguments (no parameters).
+   /*
+   * METHODS(S)
+   * Note: When you define a field (an instance variable)
+   * it is often a good idea to "encapsulate" each field
+   * by defining public set and get metods, like those below:
+   */
+
+   // PUBLIC method to set the name in the object              
+   public void setName(String name)      
+   { 
+      /* 
+      Note that there are two variables with the same name!
+      Which one is a local variable, having method-wide scope?
+      Which one is the instance variable, having class-wdie scope?
+      Where was the local variable actually declared?
+      */                                            
+      this.name = name; // store the name
+   } // end method setName      
+
+   // PUBLIC method to retrieve the name from the object
    public String getName()        
-   {                                    
+   {          
+      //returning the value of the INSTANCE VARIABLE name 
+      // (note that no local variable was declared inside this method) 
+      // Also note that whatever is returned has to match the 
+      // return type for the method (in this case, String)                         
       return name; // return value of name to caller        
-   }         
+   } // end method getName       
 } // end class Account
 
 
