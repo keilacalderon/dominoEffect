@@ -7,7 +7,11 @@ public class AccountTest
    public static void main(String[] args)
    { 
       // create two Account objects
-      Account account1 = new Account("Jane Green");
+      Account account1 = new Account("Jane Green"); // call the 1-arg constructor, passing 
+      												// the string value "Jane Green", which 
+      												// will eventually become the value of 
+      												// the instance variable name for 
+      												// the account1 object
       Account account2 = new Account("John Blue"); 
 
       // display initial value of name for each Account

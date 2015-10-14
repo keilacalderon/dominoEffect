@@ -3,11 +3,23 @@
 
 public class Account
 {
+   /*
+   * FIELD(S) -- meaning INSTANCE VARIABLE(S)
+   */
    private String name; // instance variable
+
+   /*
+   * CONSTRUCTOR(S)
+   * Note that if we define a constructor explicitly, 
+   * then the java compiler will NOT automatically create
+   * a "default" constructor that takes no arguments
+   */
 
    // constructor initializes name with parameter name
    public Account(String name) // constructor name is class name 
-   {                                                               
+   {    
+      // we use the keyword "this" to indicate
+      // which name variable is the instance variable                                                           
       this.name = name;
    }                                            
 
