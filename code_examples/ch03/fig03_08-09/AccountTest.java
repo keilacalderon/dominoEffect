@@ -6,13 +6,18 @@ public class AccountTest
 {
    public static void main(String[] args) 
    {
+      // instantiating two account objects
+      // Note that the only Account constructor available in 
+      // this project takes two arguments (one String, one double)
       Account account1 = new Account("Jane Green", 50.00);
       Account account2 = new Account("John Blue", -7.53); 
 
       // display initial balance of each object
-      System.out.printf("%s balance: $%.2f%n",
+      // Note that use of %f format specifier, which serves
+      // as a placeholder for floating-point values
+      System.out.printf("%s balance: $%.2f\n",
          account1.getName(), account1.getBalance()); 
-      System.out.printf("%s balance: $%.2f%n%n",
+      System.out.printf("%s balance: $%.2f\n\n",
          account2.getName(), account2.getBalance()); 
 
       // create a Scanner to obtain input from the command window
