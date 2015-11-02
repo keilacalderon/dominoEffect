@@ -48,8 +48,7 @@ public class WhiteCell extends Actor
 
         if (isTouching(Virus.class)) 
         {
-            Greenfoot.playSound("game-over.wav");
-            Greenfoot.stop();
+            
         }
     }
 }

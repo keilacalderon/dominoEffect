@@ -18,7 +18,7 @@ public class Bloodstream extends World
         super(780, 360, 1); 
 
         prepare();
-    }
+    } // end constructor
 
     /**
      * Create new floating objects at irregular intervals.
@@ -26,10 +26,33 @@ public class Bloodstream extends World
     public void act()
     {
         if (Greenfoot.getRandomNumber(100) < 3)
+        /*
+         * Add new bacteria objects to a set x-coordinate 
+         * location and a random y-coordinate location
+         */
         {
             addObject(new Bacteria(), 779, Greenfoot.getRandomNumber(360));
-        }
-    }
+        } // end if bacteria
+        if (Greenfoot.getRandomNumber(100) < 1)
+        /*
+         * Add new lining objects to appear on the right top 
+         * and bottom sides of the Bloodstream World 
+         * and setting the probability of new objects 1%
+         */
+        {
+            addObject(new Lining(), 779, 359);    
+            addObject(new Lining(), 779, 0);
+        }// end if lining
+        if (Greenfoot.getRandomNumber(100) < 1)
+        /*
+         * Add new virus objects at the right edge of the screen.
+         * Setting the y-coordinate random, and setting the probability
+         * of new objects 1%
+         */
+        {
+            addObject(new Virus(), 779, Greenfoot.getRandomNumber(360));
+        } // end if virus
+    } // end act method
     
     /**
      * Prepare the world for the start of the program. In this case: Create
@@ -60,5 +83,5 @@ public class Bloodstream extends World
         addObject(lining11, 596, 359);
         Lining lining12 = new Lining();
         addObject(lining12, 740, 354);
-    }
-}
+    } // end prepare method
+} // end clas

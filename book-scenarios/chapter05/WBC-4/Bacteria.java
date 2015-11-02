@@ -9,13 +9,22 @@ import greenfoot.*;
  */
 public class Bacteria extends Actor
 {
-    private int speed;
+    /*
+     * Create a new instance varible of type int
+     * called speed, in order to make the movement 
+     * more interesting
+     */
+    private int speed; 
 
     /**
      * Constructor: Initialise the speed to a somewhat random value.
      */
     public Bacteria()
     {
+        /*
+         * Set the movement of speed to a random value 
+         * between 1 and 3
+         */
         speed = Greenfoot.getRandomNumber(5) + 1;
     }
     
@@ -24,6 +33,10 @@ public class Bacteria extends Actor
      */
     public void act() 
     {
+        /*
+         * subtract the varaible speed from the
+         * x-coordinate rather than the value 2
+         */
         setLocation(getX()-speed, getY());
         turn(1);
         

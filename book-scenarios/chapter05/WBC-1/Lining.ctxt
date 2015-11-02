@@ -1,5 +1,5 @@
 #BlueJ class context
 comment0.params=
 comment0.target=void\ act()
-comment0.text=\n\ Act\ -\ nothing\ to\ do.\n
+comment0.text=\r\n\ Lining\ objects\ move\ continuously\ left\ 1px\ per\ act\ cycle\ while\ \r\n\ making\ the\ lining\ objects\ disappear\ when\ they\ reach\ the\ left\ edge\r\n
 numComments=1
