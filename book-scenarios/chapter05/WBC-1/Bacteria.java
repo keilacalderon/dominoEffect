@@ -21,10 +21,10 @@ public class Bacteria extends Actor
     public Bacteria()
     {
         /*
-         * Set the movement of speed to a random value 
-         * between 1 and 3
+         * Movement of speed to a random value 
+         * between 1 and 5 to make more challenging 
          */
-        speed = Greenfoot.getRandomNumber(3)+1;
+        speed = Greenfoot.getRandomNumber(5)+1;
     } // end constructor
 
     /**

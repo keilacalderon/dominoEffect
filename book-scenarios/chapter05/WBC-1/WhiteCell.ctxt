@@ -1,14 +1,11 @@
 #BlueJ class context
 comment0.params=
-comment0.target=WhiteCell()
-comment0.text=\n\ Constructor\n
+comment0.target=void\ act()
+comment0.text=\n\ Act\:\ move\ up\ and\ down\ when\ cursor\ keys\ are\ pressed.\n
 comment1.params=
-comment1.target=void\ act()
-comment1.text=\n\ Act\:\ move\ up\ and\ down\ when\ cursor\ keys\ are\ pressed.\n
+comment1.target=void\ checkKeyPress()
+comment1.text=\n\ Check\ whether\ a\ keyboard\ key\ has\ been\ pressed\ and\ react\ if\ it\ has.\n
 comment2.params=
-comment2.target=void\ checkKeyPress()
-comment2.text=\n\ Check\ whether\ a\ keyboard\ key\ has\ been\ pressed\ and\ react\ if\ it\ has.\n
-comment3.params=
-comment3.target=void\ checkCollision()
-comment3.text=\n\ Check\ whether\ the\ WhiteCell\ is\ touching\ a\ virus\ \n
-numComments=4
+comment2.target=void\ checkCollision()
+comment2.text=\n\ Check\ whether\ the\ WhiteCell\ is\ touching\ a\ virus\ \n
+numComments=3

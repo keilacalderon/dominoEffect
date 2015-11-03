@@ -17,9 +17,9 @@ public class RedCell extends Actor
     public RedCell()
     {
         /*
-         * Set the movement of speed to a random value
-         * between 1 and 2
-         * Set random rotation for red cells 
+         * Red cells are slow. movement set to 
+         * a random value between 1 and 2. 
+         * Random rotation set for red cells 
          */
         speed = Greenfoot.getRandomNumber(2)+1;
         setRotation(Greenfoot.getRandomNumber(360));
@@ -31,8 +31,9 @@ public class RedCell extends Actor
     public void act() 
     {
         /*
-         * set location for RedCells and subtract speed from x-coordinate
-         * rotate at a slow rate of 1 pixel per cycle
+         * Location for RedCells set by subtracting speed 
+         * from x-coordinate. Rotates at a slow rate of 
+         * 1 pixel per cycle
          */
         setLocation(getX()-speed, getY());
         turn(1);

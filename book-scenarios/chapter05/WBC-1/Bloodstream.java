@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Bloodstream extends World
 {
+    private int score;
 
     /**
      * Constructor: Set up the staring objects.
@@ -18,6 +19,9 @@ public class Bloodstream extends World
         super(780, 360, 1); 
         prepare();
         setPaintOrder( Border.class );
+        score = score + 20;
+        showText("Score: " + score, 80, 25); // show score in game by using 
+                                                        // showText method from World Class
     } // end constructor
 
     /**

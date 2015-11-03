@@ -17,7 +17,7 @@ public class Virus extends Actor
          * Make Virus move 4 cells per act cycle, 
          * and rotate counter-clockwise. 
          */
-        setLocation(getX()-4, getY());
+        setLocation(getX()-8, getY());
         turn(-1);
         if (getX() == 0) 
         {

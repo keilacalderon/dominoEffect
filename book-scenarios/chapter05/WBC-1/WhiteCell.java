@@ -9,21 +9,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class WhiteCell extends Actor
 {
-    /*
-     * Add an instance varible of type int called score
-     */
-    private int score;
-    /**
-     * Constructor
-     */
-    public WhiteCell()
-    {
-        /*
-         * Increment the score by 20 
-         *when a bacterium is caught
-         */
-        score = score + 20;
-    }
     /**
      * Act: move up and down when cursor keys are pressed.
      */
@@ -40,19 +25,19 @@ public class WhiteCell extends Actor
     {
         if (Greenfoot.isKeyDown("up")) 
         {
-            setLocation(getX(), getY()-4);
+            setLocation(getX(), getY()-8);
         } // end if
 
         if (Greenfoot.isKeyDown("down")) 
         {
-            setLocation(getX(), getY()+4);
+            setLocation(getX(), getY()+8);
         } // end if
-        
+
         if (Greenfoot.isKeyDown("left")) 
         {
             setLocation(getX()-4, getY());
         } // end if
-        
+
         if (Greenfoot.isKeyDown("right")) 
         {
             setLocation(getX()+4, getY());
@@ -74,7 +59,7 @@ public class WhiteCell extends Actor
             removeTouching(Bacteria.class);
             Greenfoot.playSound("slurp.wav");
         } // end if bacteria
-        
+
         /*
          * If WhiteCell object is touching virus play
          * game over sound then call the stop method  
