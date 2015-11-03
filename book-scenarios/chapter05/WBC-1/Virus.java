@@ -19,5 +19,9 @@ public class Virus extends Actor
          */
         setLocation(getX()-4, getY());
         turn(-1);
+        if (getX() == 0) 
+        {
+            getWorld().removeObject(this);
+        } // end if
     } // end act method  
 } // end class

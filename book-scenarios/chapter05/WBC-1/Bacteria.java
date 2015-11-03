@@ -16,7 +16,7 @@ public class Bacteria extends Actor
      */
     private int speed;
     /**
-     * Constructor. Nothing to do so far.
+     * Constructor. Set speed to a random value
      */
     public Bacteria()
     {
@@ -25,7 +25,7 @@ public class Bacteria extends Actor
          * between 1 and 3
          */
         speed = Greenfoot.getRandomNumber(3)+1;
-    }
+    } // end constructor
 
     /**
      * Float along the bloodstream, slowly rotating.

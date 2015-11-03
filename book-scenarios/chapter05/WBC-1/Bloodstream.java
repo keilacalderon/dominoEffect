@@ -4,8 +4,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * The bloodstream is the setting for our White Blood Cell scenario. 
  * It's a place where blood cells, bacteria and viruses float around.
  * 
- * @author Michael Kölling
- * @version 0.1
+ * @author Keila Calderon
+ * @version CSCI145_Fall2015_GreenfootCh.5
  */
 public class Bloodstream extends World
 {
@@ -16,8 +16,8 @@ public class Bloodstream extends World
     public Bloodstream()
     {    
         super(780, 360, 1); 
-
         prepare();
+        setPaintOrder( Border.class );
     } // end constructor
 
     /**
@@ -33,6 +33,7 @@ public class Bloodstream extends World
         {
             addObject(new Bacteria(), 779, Greenfoot.getRandomNumber(360));
         } // end if bacteria
+
         if (Greenfoot.getRandomNumber(100) < 1)
         /*
          * Add new lining objects to appear on the right top 
@@ -43,6 +44,7 @@ public class Bloodstream extends World
             addObject(new Lining(), 779, 359);    
             addObject(new Lining(), 779, 0);
         }// end if lining
+
         if (Greenfoot.getRandomNumber(100) < 1)
         /*
          * Add new virus objects at the right edge of the screen.
@@ -52,8 +54,18 @@ public class Bloodstream extends World
         {
             addObject(new Virus(), 779, Greenfoot.getRandomNumber(360));
         } // end if virus
+
+        if (Greenfoot.getRandomNumber(100) < 6)
+        /*
+         * Add new RedCell objects at the right edge of the screen.
+         * Setting the y-coordinate random, and setting the probability
+         * of new objects 6%
+         */
+        {
+            addObject(new RedCell(), 779, Greenfoot.getRandomNumber(360));
+        } // end if virus
     } // end act method
-    
+
     /**
      * Prepare the world for the start of the program. In this case: Create
      * a white blood cell and the lining at the edge of the blood stream.
@@ -61,7 +73,7 @@ public class Bloodstream extends World
     private void prepare()
     {
         WhiteCell whitecell = new WhiteCell();
-        addObject(whitecell, 83, 179);
+        addObject(whitecell, 200, 179);
         Lining lining = new Lining();
         addObject(lining, 126, 1);
         Lining lining2 = new Lining();
@@ -83,5 +95,10 @@ public class Bloodstream extends World
         addObject(lining11, 596, 359);
         Lining lining12 = new Lining();
         addObject(lining12, 740, 354);
+        
+        Border border = new Border();
+        addObject(border, 0, 180);
+        Border border2 = new Border();
+        addObject(border2, 770, 180);
     } // end prepare method
-} // end clas
+} // end class
