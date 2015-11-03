@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Bacteria extends Actor
 {
-     /*
+    /*
      * Create a new instance varible of type int
      * called speed, in order to make the movement 
      * more interesting
@@ -32,7 +32,7 @@ public class Bacteria extends Actor
      */
     public void act() 
     {
-         /*
+        /*
          * subtract the varaible speed from the
          * x-coordinate rather than the value 2
          */
@@ -40,7 +40,9 @@ public class Bacteria extends Actor
         turn(1);
         if (getX() == 0) 
         {
-            getWorld().removeObject(this);
+            Bloodstream bloodstream = (Bloodstream)getWorld();
+            bloodstream.addScore(-15);
+            bloodstream.removeObject(this);
         } // end if
     } // end act method
 } // end class

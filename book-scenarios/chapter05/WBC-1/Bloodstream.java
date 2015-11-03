@@ -10,7 +10,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Bloodstream extends World
 {
     private int score;
-
+    private int time;
     /**
      * Constructor: Set up the staring objects.
      */
@@ -19,9 +19,10 @@ public class Bloodstream extends World
         super(780, 360, 1); 
         prepare();
         setPaintOrder( Border.class );
-        score = score + 20;
-        showText("Score: " + score, 80, 25); // show score in game by using 
-                                                        // showText method from World Class
+        score = 0;
+        showScore();
+        time = 2000;
+        showTime();
     } // end constructor
 
     /**
@@ -68,8 +69,59 @@ public class Bloodstream extends World
         {
             addObject(new RedCell(), 779, Greenfoot.getRandomNumber(360));
         } // end if virus
+        countTime();
+        showTime();
     } // end act method
 
+    /**
+     * Add a score to the game to make it 
+     * more interesting and competitive
+     */
+    public void addScore(int points)
+    {
+        score = score + points;
+        showScore();
+        if (score < 0)
+        {
+            Greenfoot.playSound("game-over.wav");
+            Greenfoot.stop();
+        } // end if
+    } // end addScore
+
+    /**
+     * Show current score on screen
+     */
+    private void showScore()
+    {
+        showText("Score: " + score, 80, 25);// show score in game by using 
+        // showText method from World Class
+    } // end showScore 
+
+    /**
+     * Show time remaining 
+     */
+    private void showTime()
+    {
+        showText("Time: " + time, 700, 25);
+    } // end showTime
+    
+    private void countTime()
+    {
+        time--;
+        showTime();
+        if (time == 0)
+        {
+            showEndMessage();
+            Greenfoot.stop();
+        } // end if
+    } // end countTime
+    
+    private void showEndMessage()
+    {
+        showText("Time is up", 390, 150);
+        showText("Your final score: " + score + "points", 390, 170);
+    } // end showEndMessage
+    
     /**
      * Prepare the world for the start of the program. In this case: Create
      * a white blood cell and the lining at the edge of the blood stream.
@@ -99,7 +151,7 @@ public class Bloodstream extends World
         addObject(lining11, 596, 359);
         Lining lining12 = new Lining();
         addObject(lining12, 740, 354);
-        
+
         Border border = new Border();
         addObject(border, 0, 180);
         Border border2 = new Border();
