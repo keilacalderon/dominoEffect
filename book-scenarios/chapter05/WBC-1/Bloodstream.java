@@ -95,10 +95,10 @@ public class Bloodstream extends World
     {
         showText("Score: " + score, 80, 25);// show score in game by using 
         // showText method from World Class
-    } // end showScore 
-
+    } // end showScore
+    
     /**
-     * Show time remaining 
+     * Show time remaining
      */
     private void showTime()
     {
@@ -109,19 +109,19 @@ public class Bloodstream extends World
     {
         time--;
         showTime();
-        if (time == 0)
+        if (time ==0)
         {
             showEndMessage();
             Greenfoot.stop();
         } // end if
     } // end countTime
-    
+
     private void showEndMessage()
     {
         showText("Time is up", 390, 150);
         showText("Your final score: " + score + "points", 390, 170);
     } // end showEndMessage
-    
+
     /**
      * Prepare the world for the start of the program. In this case: Create
      * a white blood cell and the lining at the edge of the blood stream.
