@@ -30,7 +30,7 @@ public class Bloodstream extends World
      */
     public void act()
     {
-        if (Greenfoot.getRandomNumber(100) < 5)
+        if (Greenfoot.getRandomNumber(100) < 3)
         /*
          * Add new bacteria objects to a set x-coordinate 
          * location and a random y-coordinate location
@@ -50,7 +50,7 @@ public class Bloodstream extends World
             addObject(new Lining(), 779, 0);
         }// end if lining
 
-        if (Greenfoot.getRandomNumber(100) < 1)
+        if (Greenfoot.getRandomNumber(100) < 3)
         /*
          * Add new virus objects at the right edge of the screen.
          * Setting the y-coordinate random, and setting the probability
@@ -60,7 +60,7 @@ public class Bloodstream extends World
             addObject(new Virus(), 779, Greenfoot.getRandomNumber(360));
         } // end if virus
 
-        if (Greenfoot.getRandomNumber(100) < 8)
+        if (Greenfoot.getRandomNumber(100) < 1)
         /*
          * Add new RedCell objects at the right edge of the screen.
          * Setting the y-coordinate random, and setting the probability
