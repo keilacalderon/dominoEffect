@@ -70,7 +70,7 @@ public class WhiteCell extends Actor
         {
             removeTouching(Virus.class);
             Bloodstream bloodstream = (Bloodstream)getWorld();
-            bloodstream.addScore(-100);
+            bloodstream.addScore(-80);
         } // end if virus
     } // end checkCollision method
 } // end class

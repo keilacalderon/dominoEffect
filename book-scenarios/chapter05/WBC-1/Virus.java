@@ -14,10 +14,10 @@ public class Virus extends Actor
     public void act() 
     {
         /*
-         * Make Virus move 4 cells per act cycle, 
+         * Make Virus move 5 cells per act cycle, 
          * and rotate counter-clockwise. 
          */
-        setLocation(getX()-4, getY());
+        setLocation(getX()-5, getY());
         turn(-1);
         if (getX() == 0) 
         {
