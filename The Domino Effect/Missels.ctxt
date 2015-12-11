@@ -1,5 +1,11 @@
 #BlueJ class context
-comment0.params=
-comment0.target=void\ act()
-comment0.text=\r\n\ Act\ -\ do\ whatever\ the\ Missels\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
-numComments=1
+comment0.target=Missels
+comment0.text=\n\ Write\ a\ description\ of\ class\ Missels\ here.\n\ \n\ @author\ Keila\ Calderon\ \n\ @version\ CSCI145_Final2015\n
+comment1.params=
+comment1.target=Missels()
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\n\ Act\ -\ do\ whatever\ the\ Missels\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
+comment3.params=
+comment3.target=void\ fall()
+numComments=4
