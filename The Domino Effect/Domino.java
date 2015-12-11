@@ -9,14 +9,15 @@ import greenfoot.*;
 public class Domino extends Actor
 {
     private int vSpeed; 
-    
-    public Domino() 
+    private int accelCounter;
+     public Domino() 
     {
-        vSpeed = 2;
+        vSpeed = 1;
+        accelCounter = 0;
     }
     
     /**
-     * Act - do whatever the Domino wants to do. This method is called whenever
+     * Act - do whatever the Missels wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act()
@@ -26,6 +27,11 @@ public class Domino extends Actor
 
     public void fall()
     {
-        setLocation(getX(), getY() +vSpeed);
+        setLocation(getX(), getY() + vSpeed);
+        if (accelCounter >= 10) {
+            vSpeed++;
+            accelCounter = 0;
+        }
+        accelCounter++;
     }
 } // end class

@@ -1,10 +1,13 @@
 #BlueJ class context
-comment0.target=Bomber
-comment0.text=\n\ A\ bomber\ that\ will\ be\ automatically\ controlled.\ It\ will\ fire\ down\ dominos,\ \n\ bananas,\ and\ missels.\ \n\ \n\ @author\ Keila\ Calderon\ \n\ @version\ CSCI145_Final2015\n
+comment0.params=
+comment0.target=Bomber()
+comment0.text=\r\n\ \r\n
 comment1.params=
 comment1.target=void\ act()
-comment1.text=\n\ Act\ -\ do\ whatever\ the\ Bomber\ does.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
 comment2.params=
 comment2.target=void\ turnAtEdge()
-comment2.text=\n\ Check\ whether\ the\ bomber\ is\ at\ the\ edge\ of\ the\ world.\ If\ it\ is,\ turn\ around.\n\ If\ not,\ do\ nothing.\n
-numComments=3
+comment2.text=\r\n\ Check\ whether\ the\ bomber\ is\ at\ the\ edge\ of\ the\ world.\ If\ it\ is,\ turn\ around.\r\n\ If\ not,\ do\ nothing.\r\n
+comment3.params=
+comment3.target=void\ switchImage()
+comment3.text=\r\n\ Alternate\ the\ crab's\ image\ between\ image1\ and\ image2.\r\n
+numComments=4

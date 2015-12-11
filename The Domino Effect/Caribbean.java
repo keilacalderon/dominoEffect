@@ -33,9 +33,9 @@ public class Caribbean extends World
         Bomber bomber = new Bomber();
         addObject(bomber, 80, 90);
         Island island = new Island();
-        addObject(island, 299, 600);
+        addObject(island, 290, 780);
         Island island2 = new Island();
-        addObject(island2, 827, 600);
+        addObject(island2, 908, 785);
         Diplomat diplomat = new Diplomat();
         addObject(diplomat, 400, 200);
     } // end prepare
@@ -50,7 +50,6 @@ public class Caribbean extends World
         showScore();
         if (score < -100) 
         {
-            Greenfoot.playSound("game-over.wav");
             Greenfoot.stop();
         }
     }
