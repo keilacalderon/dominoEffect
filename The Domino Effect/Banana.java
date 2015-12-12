@@ -3,16 +3,18 @@ import greenfoot.*;
 /**
  * A Banana can hit the islands. 
  * 
- * @author Keila Calderon 
+ * @author keila@email.uscb.edu 
  * @version CSCI145_Final2015
  */
 public class Banana extends Actor
 
 {
     private int vSpeed; 
-    public Banana() 
+    private int speedFactor;
+    public Banana(int difficulty) 
     {
         vSpeed = 2;
+        speedFactor = difficulty;
     }
     
     /**
@@ -25,6 +27,6 @@ public class Banana extends Actor
 
     public void fall()
     {
-        setLocation(getX(), getY() +vSpeed);
+        setLocation(getX(), getY() + vSpeed + speedFactor);
     }
 }// end Banana class

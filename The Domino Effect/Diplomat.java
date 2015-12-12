@@ -3,11 +3,21 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class Diplomat here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author keila@email.uscb.edu 
+ * @version CSCI145_Final2015
  */
 public class Diplomat extends Actor
 {
+    private GreenfootImage image1;
+    private GreenfootImage image2;
+    
+    public Diplomat()
+    {
+        image1 = new GreenfootImage("peace_dove.png");
+        image2 = new GreenfootImage("peace_dove2.png");
+        setImage(image1);
+    }
+    
     /**
      * Act - do whatever the Diplomat wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -34,11 +44,13 @@ public class Diplomat extends Actor
         if (Greenfoot.isKeyDown("right")) 
         {
             setLocation(getX()+4, getY());
+            setImage(image2);
         }
         
         if (Greenfoot.isKeyDown("left")) 
         {
             setLocation(getX()-4, getY());
+            setImage(image1);
         }
     } // end checkKeyPress 
     

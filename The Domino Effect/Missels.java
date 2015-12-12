@@ -3,17 +3,19 @@ import greenfoot.*;
 /**
  * Write a description of class Missels here.
  * 
- * @author Keila Calderon 
+ * @author keila@email.uscb.edu 
  * @version CSCI145_Final2015
  */
 public class Missels extends Actor
 {
     private int vSpeed; 
     private int accelCounter;
-     public Missels() 
+    private int speedFactor;
+    public Missels(int difficulty) 
     {
         vSpeed = 1;
         accelCounter = 0;
+        speedFactor = difficulty;
     }
     
     /**
@@ -27,7 +29,7 @@ public class Missels extends Actor
 
     public void fall()
     {
-        setLocation(getX(), getY() + vSpeed);
+        setLocation(getX(), getY() + 3 + speedFactor);
         if (accelCounter >= 10) {
             vSpeed++;
             accelCounter = 0;

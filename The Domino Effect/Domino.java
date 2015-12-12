@@ -3,18 +3,20 @@ import greenfoot.*;
 /**
  * Write a description of class Domino here.
  * 
- * @author Keila Calderon 
+ * @author keila@email.uscb.edu 
  * @version CSCI145_Final2015
  */
 public class Domino extends Actor
 {
     private int vSpeed; 
     private int accelCounter;
+    private int speedFactor;
 
-     public Domino() 
+     public Domino(int difficulty) 
     {
         vSpeed = 1;
         accelCounter = 0;
+        speedFactor = difficulty;
     }
     
     /**
@@ -28,7 +30,7 @@ public class Domino extends Actor
 
     public void fall()
     {
-        setLocation(getX(), getY() + vSpeed);
+        setLocation(getX(), getY() + vSpeed + speedFactor);
         if (accelCounter >= 10) {
             vSpeed++;
             accelCounter = 0;

@@ -3,7 +3,7 @@ import greenfoot.*;
 /**
  * An Island in Central_America.
  * 
- * @author Keila Calderon 
+ * @author keila@email.uscb.edu 
  * @version CSCI145_Final2015
  */
 public class Island extends Actor
@@ -26,14 +26,14 @@ public class Island extends Actor
         {
             removeTouching(Domino.class);
             Caribbean caribbean = (Caribbean)getWorld();
-            caribbean.addScore(-3);
+            caribbean.addScore(-5);
         } // end if banana 
 
         if (isTouching(Missels.class))
         {
             removeTouching(Missels.class);
             Caribbean caribbean = (Caribbean)getWorld();
-            caribbean.addScore(-2);
+            caribbean.addScore(-3);
         } // end if banana 
     } // end checkCollision 
 }

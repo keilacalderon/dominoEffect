@@ -19,7 +19,7 @@ public class Caribbean extends World
         super(1200, 800, 1); 
         prepare();
         score = 0; 
-        time = 2000; 
+        time = 3000; 
         showScore();
         showTime();
     } // end constructor 
@@ -37,9 +37,14 @@ public class Caribbean extends World
         Island island2 = new Island();
         addObject(island2, 908, 785);
         Diplomat diplomat = new Diplomat();
-        addObject(diplomat, 400, 200);
+        addObject(diplomat, 600, 400);
     } // end prepare
-
+    
+    public void act() 
+    {
+        countTime();
+    }
+    
     /**
      * Add some points to our current score. (May be negative.)
      * If the score falls below 0, game's up.
@@ -48,7 +53,7 @@ public class Caribbean extends World
     {
         score = score + points;
         showScore();
-        if (score < -100) 
+        if (score < -10) 
         {
             Greenfoot.stop();
         }
