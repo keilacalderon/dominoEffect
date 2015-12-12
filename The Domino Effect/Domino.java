@@ -10,6 +10,7 @@ public class Domino extends Actor
 {
     private int vSpeed; 
     private int accelCounter;
+
      public Domino() 
     {
         vSpeed = 1;

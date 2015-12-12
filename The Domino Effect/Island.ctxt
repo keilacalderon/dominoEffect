@@ -1,6 +1,8 @@
 #BlueJ class context
-comment0.params=
-comment0.target=void\ act()
+comment0.target=Island
+comment0.text=\n\ An\ Island\ in\ Central_America.\n\ \n\ @author\ Keila\ Calderon\ \n\ @version\ CSCI145_Final2015\n
 comment1.params=
-comment1.target=void\ checkCollision()
-numComments=2
+comment1.target=void\ act()
+comment2.params=
+comment2.target=void\ checkCollision()
+numComments=3

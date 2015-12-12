@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Thu Dec 10 22:32:45 EST 2015
+#Fri Dec 11 16:08:04 EST 2015
 target2.width=80
 target8.name=Island
 target5.naviview.expanded=true
@@ -70,7 +70,7 @@ dependency11.from=Bomber
 dependency7.type=UsesDependency
 target1.naviview.expanded=true
 class.Diplomat.image=blue-draught.png
-version=2.7.1
+version=2.8.0
 target5.editor.width=900
 dependency15.from=Diplomat
 dependency6.to=Island
@@ -160,14 +160,14 @@ dependency19.type=UsesDependency
 target7.height=50
 dependency5.type=UsesDependency
 target8.type=ClassTarget
-class.Banana.image=banana.png
-dependency18.to=Missels
 class.Domino.superclass=greenfoot.Actor
+dependency18.to=Missels
+class.Banana.image=banana.png
 dependency13.from=Island
 dependency9.type=UsesDependency
 target3.editor.height=700
-target6.width=80
 target7.naviview.expanded=true
+target6.width=80
 class.Domino.image=dominoo.png
 target7.width=80
 target6.editor.height=700
@@ -177,8 +177,8 @@ target1.typeParameters=
 target3.width=80
 target4.width=80
 target8.typeParameters=
-target1.editor.y=50
 dependency7.from=Island
+target1.editor.y=50
 target1.editor.x=284
 target5.width=90
 dependency4.to=Banana
