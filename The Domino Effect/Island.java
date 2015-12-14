@@ -20,6 +20,7 @@ public class Island extends Actor
             removeTouching(Banana.class);
             Caribbean caribbean = (Caribbean)getWorld();
             caribbean.addScore(-1);
+            Greenfoot.playSound("Cannon.wav");
         } // end if banana 
 
         if (isTouching(Domino.class))
@@ -27,6 +28,7 @@ public class Island extends Actor
             removeTouching(Domino.class);
             Caribbean caribbean = (Caribbean)getWorld();
             caribbean.addScore(-5);
+            Greenfoot.playSound("Cannon.wav");
         } // end if banana 
 
         if (isTouching(Missels.class))
@@ -34,6 +36,7 @@ public class Island extends Actor
             removeTouching(Missels.class);
             Caribbean caribbean = (Caribbean)getWorld();
             caribbean.addScore(-3);
+            Greenfoot.playSound("Cannon.wav");
         } // end if banana 
     } // end checkCollision 
 }

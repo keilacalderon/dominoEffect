@@ -1,8 +1,8 @@
 import greenfoot.*;
 
 /**
- * A bomber that will be automatically controlled. It will fire down dominos, 
- * bananas, and missels. 
+ * A bomber that will be moving across the screen. It will fire down dominos, 
+ * bananas, and missiles. 
  * 
  * @author keila@email.uscb.edu 
  * @version CSCI145_Final2015
@@ -21,8 +21,9 @@ public class Bomber extends Actor
     private int difficultyCounter;
     private int eventualDominoCounter;
     private int eventualMisselsCounter;
+
     /**
-     * 
+     * Intialize the Bomber 
      */
     public Bomber()
     {
@@ -30,29 +31,31 @@ public class Bomber extends Actor
         image2 = new GreenfootImage("bomber2.png");
         setImage(image1);
         dominoCounter = 0;
-        
-        
         dominoDistri = 15 + Greenfoot.getRandomNumber(45);
         bananaDistri = 40 + Greenfoot.getRandomNumber(100);
         difficultyCounter = 0;
         difficulty = 0;
         eventualDominoCounter = 0;
         eventualMisselsCounter = 0;
-    }
+    } // end contructor 
 
+    /**
+     * Do what a Bomber's gotta do. The bomber will fly back and
+     * forth across the screen dropping different weapons
+     */
     public void act() 
     {
         turnAtEdge();
         move(2);
         genDominos();
         genBanana();
-        genMissels();
+        genMissiles();
         checkDifficulty();
-    } // end act   
+    } // end act method
 
     /**
-     * Check whether the bomber is at the edge of the world. If it is, turn around.
-     * If not, do nothing.
+     * Check whether the bomber is at the edge of the world. If it is, turn around 
+     * and switch images. If not, do nothing.
      */
     private void turnAtEdge()
     {
@@ -61,8 +64,11 @@ public class Bomber extends Actor
             turn(90);
             setImage();
         } // end if
-    } // end turnAtEdge
+    } // end turnAtEdge method
 
+    /**
+     * Alternate the Bomber's image between image1 and image2
+     */
     private void setImage()
     {
         if (getImage() == image1) 
@@ -75,57 +81,77 @@ public class Bomber extends Actor
             setImage(image1);
             setRotation(360);
         } // end else/if
-    }
+    } // end setImage method
 
+    /**
+     * Generate dominos at a delayed rate while dropping from 
+     * the bomber's position at a random distribution. 
+     * A counter is set to increase the distrubution of the Dominos as time goes by...
+     */
     private void genDominos()
     {
         if (eventualDominoCounter >= 500)
         {
             if(dominoCounter == dominoDistri)
             {
-                getWorld().addObject(new Domino(difficulty), (206 - Greenfoot.getRandomNumber(413)) + getX(), getY()+4);
-                dominoCounter = 0;
-                dominoDistri = 40 + Greenfoot.getRandomNumber(700);
-            } // end if
-            dominoCounter++;
-        }
+                getWorld().addObject(new Domino(difficulty), (206 - Greenfoot.getRandomNumber(413)) + getX(), getY()+4); // x-coordinate set at a 
+                // random number so the dropping of the dominos is not predicatable for the player, thus adding "diffultly"
+                dominoCounter = 0; 
+                dominoDistri = 40 + Greenfoot.getRandomNumber(300);
+            } // end inner if
+            dominoCounter++; 
+        } // end if
         eventualDominoCounter++;
-    }
+    } // end genDominos method
 
+    /**
+     * Generate bananas dropping from the bomber's position at a random distribution.
+     * A counter is set to increase the distrubution of the bananas as time goes by...
+     */
     private void genBanana()
     {
         if(Greenfoot.getRandomNumber(500) < 3)
         {
-            getWorld().addObject(new Banana(difficulty), (206 - Greenfoot.getRandomNumber(413)) + getX(), getY()+4);
+            getWorld().addObject(new Banana(difficulty), (206 - Greenfoot.getRandomNumber(413)) + getX(), getY()+4); // x-coordinate set at a 
+            // random number so the dropping of the dominos is not predicatable for the player, thus adding "diffultly"
             bananaCounter = 0;
-            bananaDistri = 15 + Greenfoot.getRandomNumber(30);
-        }
-        bananaCounter++;// end if
-    }
+            bananaDistri = 250 + Greenfoot.getRandomNumber(200); 
+        } // end if
+        bananaCounter++; 
+    } // end genBanana method
 
-    private void genMissels()
+    /**
+     * Generate Missiles at a delayed rate while dropping from 
+     * the bomber's position at a random distribution. 
+     * A counter is set to increase the distrubution of the Missiles as time goes by...
+     */
+    private void genMissiles()
     {
         if (eventualMisselsCounter >= 300)
         {
             if(Greenfoot.getRandomNumber(800) < 3)
             {
-                getWorld().addObject(new Missels(difficulty), (206 - Greenfoot.getRandomNumber(413)) + getX(), getY()+4);
+                getWorld().addObject(new Missels(difficulty), (206 - Greenfoot.getRandomNumber(413)) + getX(), getY()+4); // x-coordinate set at a 
+                // random number so the dropping of the dominos is not predicatable for the player, thus adding "diffultly"
                 misselsCounter = 0;
-                misselsDistri = 100 + Greenfoot.getRandomNumber(500);
-            } // end if
+                misselsDistri = 100 + Greenfoot.getRandomNumber(200);
+            } // end inner if
             misselsCounter++;
-        }
+        } // end if
         eventualMisselsCounter++;
-    }
+    } // end genMissiles method
 
+    /**
+     * After a set number of cycles (1000) 
+     * the difficulty increases. 
+     */
     private void checkDifficulty()
     {
         if (difficultyCounter == 1000)
         {
             difficulty += 5;
             difficultyCounter = 0;
-        } // end if
+        } // end if checkDifficulty
         difficultyCounter++; 
     } // end checkDifficulty 
-
 }

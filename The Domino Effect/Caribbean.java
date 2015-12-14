@@ -1,7 +1,7 @@
 import greenfoot.*;
 
 /**
- * Write a description of class caribbean here.
+ * The Caribbean. This is where the bomber will attack
  * 
  * @author Keila Calderon 
  * @version CSCI145_Final2015
@@ -10,41 +10,51 @@ public class Caribbean extends World
 {
     private int score;
     private int time; 
+    private boolean win;
+    private GreenfootSound bgMusic;
     /**
-     * Constructor for objects of class Central_America.
-     * 
+     * Constructor for objects of class Caribbean.
+     * Create the carribean and all the objects in it.
      */
     public Caribbean()
     {    
-        super(1200, 800, 1); 
+        super(1040, 800, 1); 
         prepare();
-        score = 0; 
+        score = 5; 
         time = 3000; 
         showScore();
         showTime();
+        bgMusic = new GreenfootSound("Lacrimosa.mp3");
+        bgMusic.playLoop();
     } // end constructor 
 
     /**
-     * Prepare the world for the start of the program. That is: create the initial
-     * objects and add them to the world.
+     * Prepare the world for the start of the program. 
      */
     private void prepare()
     {
         Bomber bomber = new Bomber();
         addObject(bomber, 80, 90);
         Island island = new Island();
-        addObject(island, 290, 780);
+        addObject(island, 262, 766);
         Island island2 = new Island();
-        addObject(island2, 908, 785);
+        addObject(island2, 777, 766);
+        Palm palm = new Palm();
+        addObject(palm, 370, 564);
+        Palm palm2 = new Palm();
+        addObject(palm2, 885, 562);
         Diplomat diplomat = new Diplomat();
         addObject(diplomat, 600, 400);
     } // end prepare
-    
+
+    /**
+     * 
+     */
     public void act() 
     {
         countTime();
     }
-    
+
     /**
      * Add some points to our current score. (May be negative.)
      * If the score falls below 0, game's up.
@@ -53,14 +63,16 @@ public class Caribbean extends World
     {
         score = score + points;
         showScore();
-        if (score < -10) 
+        if (score <= 0) 
         {
-            Greenfoot.stop();
+            win = false;
+            beginGameOverSequence();
+            bgMusic.pause();
         }
     }
 
     /**
-     * Show our current score on screen.
+     * Show current score on screen.
      */
     private void showScore()
     {
@@ -68,8 +80,9 @@ public class Caribbean extends World
     }
 
     /**
-     * Count down the game time and display it. Stop the game 
-     * with a winning message when time is up.
+     * Count down the game time and display it. Stop the game,
+     * music,
+     *  when time is up.
      */
     private void countTime()
     {
@@ -77,8 +90,9 @@ public class Caribbean extends World
         showTime();
         if (time == 0)
         {
-            showEndMessage();
-            Greenfoot.stop();
+            win = true;
+            beginGameOverSequence();
+            bgMusic.pause();
         }
     }
 
@@ -91,11 +105,11 @@ public class Caribbean extends World
     }
 
     /**
-     * Show the end-of-game message on screen.
+     * Starts the game over sequence
      */
-    private void showEndMessage()
+    public void beginGameOverSequence()
     {
-        showText("Time is up - you win!", 390, 150);
-        showText("Your final score: " + score + " points", 390, 170);
-    }
-} // end class
+        GameOver gameover = new GameOver(score, win);
+        Greenfoot.setWorld( gameover);
+    } // end method beginGameOverSequence
+} // end Caribbean 

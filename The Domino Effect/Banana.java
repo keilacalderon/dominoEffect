@@ -16,7 +16,7 @@ public class Banana extends Actor
         vSpeed = 2;
         speedFactor = difficulty;
     }
-    
+
     /**
      * Act - do whatever the Banana wants to do 
      */
@@ -25,7 +25,7 @@ public class Banana extends Actor
         fall();
     } // end act method
 
-    public void fall()
+    private void fall()
     {
         setLocation(getX(), getY() + vSpeed + speedFactor);
     }

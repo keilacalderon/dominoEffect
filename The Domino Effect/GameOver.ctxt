@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=score\ win
+comment0.target=GameOver(int,\ boolean)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ GameOver.\r\n\ \r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ Allows\ the\ player\ to\ go\ back\ to\ the\ title\ screen\ \r\n\ when\ the\ game\ over\ screen\ is\ clicked\ with\ the\ space\ bar\r\n
+comment2.params=
+comment2.target=void\ showEndMessage()
+comment2.text=\r\n\ Show\ the\ end-of-game\ message\ on\ screen.\r\n
+numComments=3

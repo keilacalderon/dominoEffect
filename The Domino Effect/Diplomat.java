@@ -10,14 +10,14 @@ public class Diplomat extends Actor
 {
     private GreenfootImage image1;
     private GreenfootImage image2;
-    
+
     public Diplomat()
     {
         image1 = new GreenfootImage("peace_dove.png");
         image2 = new GreenfootImage("peace_dove2.png");
         setImage(image1);
     }
-    
+
     /**
      * Act - do whatever the Diplomat wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -35,25 +35,25 @@ public class Diplomat extends Actor
         {
             setLocation(getX(), getY()-8);
         }
-        
+
         if (Greenfoot.isKeyDown("down")) 
         {
             setLocation(getX(), getY()+8);
         }
-        
+
         if (Greenfoot.isKeyDown("right")) 
         {
             setLocation(getX()+4, getY());
             setImage(image2);
         }
-        
+
         if (Greenfoot.isKeyDown("left")) 
         {
             setLocation(getX()-4, getY());
             setImage(image1);
         }
     } // end checkKeyPress 
-    
+
     private void checkCollision()
     {
         if (isTouching(Banana.class))
@@ -61,6 +61,7 @@ public class Diplomat extends Actor
             removeTouching(Banana.class);
             Caribbean caribbean = (Caribbean)getWorld();
             caribbean.addScore(1);
+            Greenfoot.playSound("swish.mp3");
         } // end if banana 
 
         if (isTouching(Domino.class))
@@ -68,6 +69,7 @@ public class Diplomat extends Actor
             removeTouching(Domino.class);
             Caribbean caribbean = (Caribbean)getWorld();
             caribbean.addScore(3);
+            Greenfoot.playSound("swish.mp3");
         } // end if banana 
 
         if (isTouching(Missels.class))
@@ -75,6 +77,7 @@ public class Diplomat extends Actor
             removeTouching(Missels.class);
             Caribbean caribbean = (Caribbean)getWorld();
             caribbean.addScore(2);
+            Greenfoot.playSound("swish.mp3");
         } // end if banana 
     } // end checkCollision 
 }    

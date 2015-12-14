@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=
+comment0.target=TitleScreen()
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ TitleScreen.\r\n\ \r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ Allow\ the\ player\ to\ start\ the\ game\ when\ the\ title\ \r\n\ screen\ is\ clicked\ using\ the\ space\ bar\r\n
+comment2.params=
+comment2.target=void\ started()
+numComments=3

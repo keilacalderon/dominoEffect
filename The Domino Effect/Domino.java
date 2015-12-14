@@ -12,13 +12,13 @@ public class Domino extends Actor
     private int accelCounter;
     private int speedFactor;
 
-     public Domino(int difficulty) 
+    public Domino(int difficulty) 
     {
         vSpeed = 1;
         accelCounter = 0;
         speedFactor = difficulty;
     }
-    
+
     /**
      * Act - do whatever the Missels wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -28,7 +28,7 @@ public class Domino extends Actor
         fall();
     } // end act method
 
-    public void fall()
+    private void fall()
     {
         setLocation(getX(), getY() + vSpeed + speedFactor);
         if (accelCounter >= 10) {
