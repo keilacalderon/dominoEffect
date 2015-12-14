@@ -1,6 +1,10 @@
 #BlueJ class context
-comment0.params=
-comment0.target=void\ act()
+comment0.target=Island
+comment0.text=\n\ Islands\ in\ the\ Caribbean.\n\ \n\ @author\ keila@email.uscb.edu\ \n\ @version\ CSCI145_Final2015\n
 comment1.params=
-comment1.target=void\ checkCollision()
-numComments=2
+comment1.target=void\ act()
+comment1.text=\n\ Do\ whatever\ the\ island\ wants\ to\ do.\n
+comment2.params=
+comment2.target=void\ checkCollision()
+comment2.text=\n\ check\ to\ see\ if\ the\ island\ is\ \n\ touching\ any\ of\ the\ "bombs".\ If\ so,\ \n\ remove\ them,\ play\ a\ sound,\ and\ subtract\ from\ score.\n
+numComments=3

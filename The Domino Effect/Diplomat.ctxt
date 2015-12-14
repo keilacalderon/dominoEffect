@@ -1,11 +1,16 @@
 #BlueJ class context
-comment0.params=
-comment0.target=Diplomat()
+comment0.target=Diplomat
+comment0.text=\n\ The\ Diplomat\ will\ be\ able\ to\ navigate\ the\ world,\ \n\ while\ trying\ to\ intercept\ the\ bombs\ from\ \n\ hitting\ the\ islands.\n\ \n\ @author\ keila@email.uscb.edu\ \n\ @version\ CSCI145_Final2015\n
 comment1.params=
-comment1.target=void\ act()
-comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Diplomat\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment1.target=Diplomat()
+comment1.text=\n\ \ Initialize\ Diplomat.\ \n
 comment2.params=
-comment2.target=void\ checkKeyPress()
+comment2.target=void\ act()
+comment2.text=\n\ Do\ whatever\ Diplomat\ does.\n
 comment3.params=
-comment3.target=void\ checkCollision()
-numComments=4
+comment3.target=void\ checkKeyPress()
+comment3.text=\n\ Check\ to\ see\ if\ the\ arrow\ keys\ are\ being\ \n\ pressed\ in\ order\ to\ move\ around\ in\ the\ game.\n
+comment4.params=
+comment4.target=void\ checkCollision()
+comment4.text=\n\ check\ to\ see\ if\ the\ diplomat\ is\ \n\ touching\ any\ of\ the\ "bombs".\ If\ so,\ \n\ remove\ them,\ play\ a\ sound,\ and\ add\ to\ score.\n
+numComments=5

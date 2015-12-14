@@ -24,7 +24,7 @@ public class Caribbean extends World
         time = 3000; 
         showScore();
         showTime();
-        bgMusic = new GreenfootSound("Lacrimosa.mp3");
+        bgMusic = new GreenfootSound("Lacrimosa.mp3"); // this was used in reference to the tegrity videos
         bgMusic.playLoop();
     } // end constructor 
 
@@ -45,15 +45,15 @@ public class Caribbean extends World
         addObject(palm2, 885, 562);
         Diplomat diplomat = new Diplomat();
         addObject(diplomat, 600, 400);
-    } // end prepare
+    } // end prepare method
 
     /**
-     * 
+     * To what the world has to do. 
      */
     public void act() 
     {
         countTime();
-    }
+    } // end act method
 
     /**
      * Add some points to our current score. (May be negative.)
@@ -63,13 +63,13 @@ public class Caribbean extends World
     {
         score = score + points;
         showScore();
-        if (score <= 0) 
+        if (score < 0) 
         {
             win = false;
             beginGameOverSequence();
             bgMusic.pause();
-        }
-    }
+        } // end if 
+    } // end addScore method
 
     /**
      * Show current score on screen.
@@ -77,15 +77,17 @@ public class Caribbean extends World
     private void showScore()
     {
         showText("Score: " + score, 80, 25);
-    }
+    } // end showScore method
 
     /**
      * Count down the game time and display it. Stop the game,
-     * music,
-     *  when time is up.
+     *  and music when time is up.
      */
     private void countTime()
     {
+        /*
+         * The bloodstream scenario was used as a reference
+         */
         time--;
         showTime();
         if (time == 0)
@@ -93,8 +95,8 @@ public class Caribbean extends World
             win = true;
             beginGameOverSequence();
             bgMusic.pause();
-        }
-    }
+        } // end if
+    } // end countTime method
 
     /**
      * Show the remaining game time on screen.
@@ -102,14 +104,14 @@ public class Caribbean extends World
     private void showTime()
     {
         showText("Time: " + time, 700, 25);
-    }
+    } // end showTime method
 
     /**
      * Starts the game over sequence
      */
-    public void beginGameOverSequence()
+    public void beginGameOverSequence() 
     {
-        GameOver gameover = new GameOver(score, win);
+        GameOver gameover = new GameOver(score, win); // this was used in reference to tegrity videos
         Greenfoot.setWorld( gameover);
     } // end method beginGameOverSequence
-} // end Caribbean 
+} // end Caribbean class

@@ -1,9 +1,13 @@
 #BlueJ class context
-comment0.params=difficulty
-comment0.target=Banana(int)
-comment1.params=
-comment1.target=void\ act()
-comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Banana\ wants\ to\ do\ \r\n
+comment0.target=Banana
+comment0.text=\n\ Bananas\ fall\ from\ the\ bomber,\ if\ not\ intercepted\ \n\ by\ the\ Diplomat\ they\ can\ hit\ the\ islands\ \n\ and\ cause\ points\ to\ be\ deducted.\ \n\ \n\ @author\ keila@email.uscb.edu\ \n\ @version\ CSCI145_Final2015\n
+comment1.params=difficulty
+comment1.target=Banana(int)
+comment1.text=\n\ Intialize\ Banana\n
 comment2.params=
-comment2.target=void\ fall()
-numComments=3
+comment2.target=void\ act()
+comment2.text=\n\ Act\ -\ do\ whatever\ the\ Banana\ wants\ to\ do\ \n
+comment3.params=
+comment3.target=void\ fall()
+comment3.text=\n\ \ Add\ speed\ for\ the\ banana\ to\ fall\ down.\n
+numComments=4

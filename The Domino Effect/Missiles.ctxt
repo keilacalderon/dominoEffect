@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Missiles
+comment0.text=\n\ The\ Missiles\ will\ drop\ from\ the\ bomber,\ \n\ if\ not\ intercepted\ by\ the\ diplomat\n\ they\ will\ affect\ the\ island.\n\ \n\ @author\ keila@email.uscb.edu\ \n\ @version\ CSCI145_Final2015\n
+comment1.params=difficulty
+comment1.target=Missiles(int)
+comment1.text=\n\ Intialize\ Missiles\n
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\n\ Act\ -\ do\ whatever\ the\ Missels\ wants\ to\ do.\ .\n
+comment3.params=
+comment3.target=void\ fall()
+comment3.text=\n\ \ Create\ acceleration\ for\ the\ Missiles\ as\ it\ falls.\ \n
+numComments=4

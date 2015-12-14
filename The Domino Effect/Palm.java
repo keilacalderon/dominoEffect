@@ -1,16 +1,16 @@
 import greenfoot.*;
 
 /**
- * Write a description of class Palm here.
+ * Palm is only an accessory to the game.
+ * It does nothing.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author keila@email.uscb.edu 
+ * @version CSCI145_Final2015
  */
 public class Palm extends Actor
 {
     /**
-     * Act - do whatever the Palm wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Act - do whatever the Palm wants to do. Which is nothing.
      */
     public void act() 
     {

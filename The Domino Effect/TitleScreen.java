@@ -26,7 +26,7 @@ public class TitleScreen extends World
      */
     public void act()
     {
-        if(Greenfoot.isKeyDown("space"))
+        if(Greenfoot.isKeyDown("space")) // this was used in reference with the tegrity videos
         {
             Caribbean caribbean = new Caribbean();
             Greenfoot.setWorld( caribbean );

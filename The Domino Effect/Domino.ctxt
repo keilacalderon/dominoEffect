@@ -1,9 +1,13 @@
 #BlueJ class context
-comment0.params=difficulty
-comment0.target=Domino(int)
-comment1.params=
-comment1.target=void\ act()
-comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Missels\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment0.target=Domino
+comment0.text=\n\ The\ Dominos\ will\ drop\ from\ the\ bomber,\ \n\ if\ not\ intercepted\ by\ the\ diplomat\n\ they\ will\ affect\ the\ island.\n\ \n\ @author\ keila@email.uscb.edu\ \n\ @version\ CSCI145_Final2015\n
+comment1.params=difficulty
+comment1.target=Domino(int)
+comment1.text=\n\ Initialize\ the\ Domino\n
 comment2.params=
-comment2.target=void\ fall()
-numComments=3
+comment2.target=void\ act()
+comment2.text=\n\ Act\ -\ do\ whatever\ the\ Domino\ wants\ to\ do.\n
+comment3.params=
+comment3.target=void\ fall()
+comment3.text=\n\ Create\ acceleration\ for\ the\ domino\ as\ it\ falls.\ \n\ \n
+numComments=4

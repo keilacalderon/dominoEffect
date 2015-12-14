@@ -71,7 +71,7 @@ public class Bomber extends Actor
      */
     private void setImage()
     {
-        if (getImage() == image1) 
+        if (getImage() == image1) // this code was used in reference to the crab scenario
         {
             setImage(image2);
             setRotation(180);
@@ -94,8 +94,8 @@ public class Bomber extends Actor
         {
             if(dominoCounter == dominoDistri)
             {
-                getWorld().addObject(new Domino(difficulty), (206 - Greenfoot.getRandomNumber(413)) + getX(), getY()+4); // x-coordinate set at a 
-                // random number so the dropping of the dominos is not predicatable for the player, thus adding "diffultly"
+                getWorld().addObject(new Domino(difficulty), (206 - Greenfoot.getRandomNumber(413)) + getX(), getY()+4); // x-coordinate set 
+                // at a random number so the dropping of the dominos is not predicatable for the player, thus adding "diffultly"
                 dominoCounter = 0; 
                 dominoDistri = 40 + Greenfoot.getRandomNumber(300);
             } // end inner if
@@ -131,7 +131,7 @@ public class Bomber extends Actor
         {
             if(Greenfoot.getRandomNumber(800) < 3)
             {
-                getWorld().addObject(new Missels(difficulty), (206 - Greenfoot.getRandomNumber(413)) + getX(), getY()+4); // x-coordinate set at a 
+                getWorld().addObject(new Missiles(difficulty), (206 - Greenfoot.getRandomNumber(413)) + getX(), getY()+4); // x-coordinate set at a 
                 // random number so the dropping of the dominos is not predicatable for the player, thus adding "diffultly"
                 misselsCounter = 0;
                 misselsDistri = 100 + Greenfoot.getRandomNumber(200);
@@ -147,11 +147,11 @@ public class Bomber extends Actor
      */
     private void checkDifficulty()
     {
-        if (difficultyCounter == 1000)
+        if (difficultyCounter == 1000) // Logan Nichols allowed me to understand how to impliment this 
         {
             difficulty += 5;
             difficultyCounter = 0;
         } // end if checkDifficulty
         difficultyCounter++; 
     } // end checkDifficulty 
-}
+} // end Bomber class
